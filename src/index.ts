@@ -25,16 +25,29 @@ const candyDistribution = (ratings: number[]): number => {
   // BASE CASE: if no children, return 0
   if (ratings.length === 0) return 0;
 
-  let minCandies = ratings.length;
+  let children = ratings.length;
 
-  for (let i = 0; i < ratings.length - 1; i++) {
-    // if current child rating not equal to a neighbor child increase a candy
-    if (ratings[i] !== ratings[i + 1]) {
-      minCandies++;
+  const candies = new Array(children).fill(1);
+
+  // Left to Right loop
+  for (let i = 1; i < children; i++) {
+    // increase right neighor's candy if
+    // it's rating is greater than current neighhor from left.
+    if (ratings[i] > ratings[i - 1]) {
+      candies[i] = candies[i - 1] + 1;
     }
   }
 
-  return minCandies;
+  // Right to left loop
+  for (let j = children - 2; j >= 0; j--) {
+    // increase left neighor's candy if
+    // it's rating is greater than current neighhor from right
+    if (ratings[j] > ratings[j + 1]) {
+      candies[j] = Math.max(candies[j], candies[j + 1] + 1);
+    }
+  }
+
+  return candies.reduce((total, num) => total + num, 0);
 };
 
 export default candyDistribution;
