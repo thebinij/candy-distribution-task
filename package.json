@@ -1,0 +1,23 @@
+{
+  "name": "candy-distribution-task",
+  "version": "1.0.0",
+  "description": "Candy distribution Task",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc",
+    "test": "cross-env TS_NODE_PROJECT='./tsconfig.test.json' mocha"
+  },
+  "author": "Binij Shrestha<shresthabinij@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^5.0.0",
+    "@types/mocha": "^10.0.10",
+    "chai": "^4.5.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.8.2",
+    "ts-node": "^10.9.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^5.7.3"
+  }
+}
