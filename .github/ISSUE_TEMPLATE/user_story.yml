@@ -1,7 +1,6 @@
 name: User Story
 description: Request a new feature for ATFM-ACDM
 labels: ['user-story']
-type: 'User Story'
 body:
   - type: textarea
     id: user-story
