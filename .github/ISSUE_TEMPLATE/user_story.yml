@@ -1,6 +1,5 @@
 name: User Story
 description: Request a new feature for ATFM-ACDM
-title: ' '
 labels: ['user-story']
 type: 'User Story'
 body:
