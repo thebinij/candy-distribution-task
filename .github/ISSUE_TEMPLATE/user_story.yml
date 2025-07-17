@@ -1,0 +1,57 @@
+name: User Story
+description: Request a new feature for ATFM-ACDM
+title: ' '
+labels: ['user-story']
+type: 'User Story'
+body:
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Describe what you want
+      placeholder: |
+        As a [user type]
+        I want [what you want]
+        So that [why you want it]
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: What should it do?
+      description: List the main requirements
+      placeholder: |
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+        - [ ] Requirement 3
+    validations:
+      required: false
+  - type: dropdown
+    id: iteration
+    attributes:
+      label: Target Iteration
+      options:
+        - Current Sprint
+        - Next Sprint
+        - Future Sprint
+        - Backlog
+    validations:
+      required: false
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of work is involved?
+      multiple: true
+      options:
+        - DevOps Task
+        - FE Task
+        - BE Task
+        - UI/UX Task
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional details
+      description: Any other information that might help
