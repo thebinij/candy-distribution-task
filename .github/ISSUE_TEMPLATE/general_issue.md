@@ -1,3 +1,11 @@
+---
+name: General Issue
+about: General issue template for other types of issues
+title: ''
+labels: []
+assignees: ''
+---
+
 # General Issue
 
 ## Issue Type
